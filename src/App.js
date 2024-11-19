@@ -8,13 +8,13 @@ function App() {
   // Convert input to celsius
 
   function convertToC() {
-    setConvertedTemp((temperature - 32) * (5/9));
+    setConvertedTemp((temperature - 32) * (5/9) + " C");
   }
 
   // Convert input to farenheight
 
   function convertToF() {
-    setConvertedTemp(temperature * (9/5) + 32);
+    setConvertedTemp(temperature * (9/5) + 32 + " F");
   }
 
   // Get temperature from onchange event
@@ -27,7 +27,7 @@ function App() {
     <div>
       <h1>React Temperature Conversion Example</h1>
       <label>Temperature: </label>
-      <input onChange={getTempFromHTMLEvent} type="number"></input><br></br>
+      <input onChange={getTempFromHTMLEvent}></input><br></br>
       <button onClick={convertToC}>Convert to Celsius</button>
       <button onClick={convertToF}>Convert to Fahrenheit</button><br></br>
       <span>Temperature: {convertedTemp}</span>
